@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+  <Properties>
+    <Property name="filename">log/lucid.log</Property>
+    <Property name="defaultPattern">[%d{yyyy-MM-dd HH:mm:ss}] [%t/%p] : %m%n</Property>
+  </Properties>
+  <Appenders>
+    <Console name="Console" target="SYSTEM_OUT">
+      <PatternLayout pattern="${defaultPattern}"/>
+    </Console>
+    <!-- <File name="File" fileName="${filename}">
+      <PatternLayout pattern="${defaultPattern}" />
+    </File> -->
+  </Appenders>
+  <Loggers>
+    <Root level="info">
+      <AppenderRef ref="Console"/>
+      <!-- <AppenderRef ref="File"/> -->
+    </Root>
+  </Loggers>
+</Configuration>
